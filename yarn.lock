@@ -437,7 +437,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chatgpt@npm:^4.3.1":
+"chatgpt@npm:4.3.1":
   version: 4.3.1
   resolution: "chatgpt@npm:4.3.1"
   dependencies:
@@ -448,6 +448,20 @@ __metadata:
     quick-lru: ^6.1.1
     uuid: ^9.0.0
   checksum: 6bc19ad16fbc808d4e5fa680e21b98b267013f3030bd7797c666002e5af86adf9f67b192abc4d026f9df6ec10388b75f0c55c07372f29fff8d0b97276aa36a03
+  languageName: node
+  linkType: hard
+
+"chatgpt@patch:chatgpt@npm%3A4.3.1#./.yarn/patches/chatgpt-npm-4.3.1-22c9c5b5aa.patch::locator=auto-answering%40workspace%3A.":
+  version: 4.3.1
+  resolution: "chatgpt@patch:chatgpt@npm%3A4.3.1#./.yarn/patches/chatgpt-npm-4.3.1-22c9c5b5aa.patch::version=4.3.1&hash=f5aa2b&locator=auto-answering%40workspace%3A."
+  dependencies:
+    eventsource-parser: ^0.0.5
+    gpt-3-encoder: ^1.1.4
+    keyv: ^4.5.2
+    p-timeout: ^6.0.0
+    quick-lru: ^6.1.1
+    uuid: ^9.0.0
+  checksum: bb674a4584eea0cda41a33d418ac4fe4e34ad8e06e8cde9e108d190bd558ac9b818c2845d27b2a33893e2b85dd4d5881957ab8d928a4b710369394e7632e7ad8
   languageName: node
   linkType: hard
 

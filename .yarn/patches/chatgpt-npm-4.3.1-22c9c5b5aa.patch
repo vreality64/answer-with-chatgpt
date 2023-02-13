@@ -1,0 +1,16 @@
+diff --git a/build/index.js b/build/index.js
+index 7323f09ed1dd497c9edba1315372130ac581898d..15e2a84c12e9f0c241a88e93d47dc54cb37a0d6d 100644
+--- a/build/index.js
++++ b/build/index.js
+@@ -331,11 +331,9 @@ ${parentMessage.text}${this._endToken}
+   }
+   async _defaultGetMessageById(id) {
+     const res = await this._messageStore.get(id);
+-    console.log("getMessageById", id, res);
+     return res;
+   }
+   async _defaultUpsertMessage(message) {
+-    console.log("upsertMessage", message.id, message);
+     await this._messageStore.set(message.id, message);
+   }
+ };
