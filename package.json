@@ -20,7 +20,8 @@
   "scripts": {
     "start": "tsx src/index.ts",
     "build": "tsup src/index.ts",
-    "publish": "npm publish"
+    "npm:patch": "npm version patch",
+    "npm:publish": "npm publish"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",
