@@ -1,5 +1,7 @@
 import { ChatGPTAPI } from 'chatgpt'
 import dotenv from 'dotenv'
+import { requestPrompt } from './prompt'
+import { createProblemSet, generateQuestion } from './request'
 
 dotenv.config()
 
@@ -8,10 +10,24 @@ const api = new ChatGPTAPI({
 })
 
 async function main() {
-  const prompt = 'Write a python version of bubble sort. Do not include example usage.'
+  const prompt = await requestPrompt()
+  const $problemSet = createProblemSet(prompt.$document)
 
-  const res = await api.sendMessage(prompt)
-  console.log(res)
+  const answers = await Promise.all(
+    $problemSet.map(async ($problem) => {
+      const question = generateQuestion($problem)
+      const response = await api.sendMessage(question)
+      const value = response.text.match(/(\d+)번/)
+
+      return {
+        question: $problem.question,
+        answer: response.text,
+        selectOption: value == null ? null : value[1],
+      }
+    })
+  )
+
+  console.log(answers)
 }
 
 main().catch((err) => {
