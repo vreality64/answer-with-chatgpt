@@ -19,7 +19,7 @@ async function main() {
     $problemSet.map(async ($problem) => {
       const question = generateQuestion($problem)
       const response = await api.sendMessage(question)
-      const value = response.text.match(/(\d+)번/)
+      const value = response.text.match(/(\d+)/)
 
       return {
         question: $problem.question,
