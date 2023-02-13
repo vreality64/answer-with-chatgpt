@@ -1,6 +1,6 @@
 {
   "name": "answer-with-chatgpt",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "auto answering through chatgpt",
   "main": "src/index.ts",
   "author": {
@@ -13,12 +13,13 @@
   },
   "license": "MIT",
   "type": "module",
-  "bin": "./index.js",
+  "bin": "./build/index.js",
   "scripts": {
     "start": "tsx src/index.ts",
     "clean": "del build",
     "prebuild": "yarn clean",
-    "build": "tsup src/index.ts"
+    "build": "tsup src/index.ts",
+    "publish": "npm publish"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",
