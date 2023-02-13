@@ -1,0 +1,8 @@
+{
+  "name": "auto-answering",
+  "version": "0.0.1",
+  "description": "auto answering through chatgpt",
+  "main": "index.js",
+  "author": "vreality64 <sh.park@toss.im>",
+  "license": "MIT"
+}
