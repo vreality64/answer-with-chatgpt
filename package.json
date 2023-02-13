@@ -2,7 +2,6 @@
   "name": "answer-with-chatgpt",
   "version": "0.0.5",
   "description": "auto answering through chatgpt",
-  "main": "src/index.ts",
   "author": {
     "name": "vreality64",
     "email": "vreality64@gmail.com"
@@ -13,28 +12,30 @@
   },
   "license": "MIT",
   "type": "module",
-  "bin": "./build/index.js",
+  "main": "build/index.js",
+  "bin": "build/index.js",
+  "files": [
+    "/build"
+  ],
   "scripts": {
     "start": "tsx src/index.ts",
-    "clean": "del build",
-    "prebuild": "yarn clean",
     "build": "tsup src/index.ts",
     "publish": "npm publish"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",
-    "del-cli": "^5.0.0",
-    "tsup": "^6.6.2",
-    "typescript": "^4.9.5"
-  },
-  "dependencies": {
     "chatgpt": "4.3.1",
     "clipboardy": "^3.0.0",
     "dotenv": "^16.0.3",
     "inquirer": "^9.1.4",
     "node-html-parser": "^6.1.4",
     "ora": "^6.1.2",
-    "tsx": "^3.12.3"
+    "tsup": "^6.6.2",
+    "tsx": "^3.12.3",
+    "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">= 18"
   },
   "packageManager": "yarn@3.4.1",
   "resolutions": {
