@@ -8,7 +8,8 @@ export default defineConfig([
     format: ['esm'],
     shims: true,
     clean: true,
-    minify: true,
+    minify: false,
     bundle: true,
+    noExternal: ['chatgpt', 'dotenv', 'ora', 'clipboardy', 'inquirer', 'node-html-parser'],
   }
 ]);
