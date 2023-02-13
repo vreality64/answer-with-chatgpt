@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "chatgpt": "4.3.1",
+    "clipboardy": "^3.0.0",
     "dotenv": "^16.0.3",
     "inquirer": "^9.1.4",
     "node-html-parser": "^6.1.4",
@@ -23,6 +24,6 @@
   },
   "packageManager": "yarn@3.4.1",
   "resolutions": {
-    "chatgpt@^4.3.1": "patch:chatgpt@npm%3A4.3.1#./.yarn/patches/chatgpt-npm-4.3.1-22c9c5b5aa.patch"
+    "chatgpt@4.3.1": "patch:chatgpt@npm%3A4.3.1#./.yarn/patches/chatgpt-npm-4.3.1-22c9c5b5aa.patch"
   }
 }
