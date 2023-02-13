@@ -1,4 +1,3 @@
-#!/bin/env tsx
 import { ChatGPTAPI } from 'chatgpt'
 import dotenv from 'dotenv'
 import { oraPromise } from 'ora'
