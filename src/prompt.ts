@@ -18,7 +18,11 @@ export function requestPrompt() {
     {
       type: 'editor',
       name: '$document',
-      message: '시험문제 페이지의 html 을 전부 알려주세요!\n브라우저에 콘솔에 이렇게 입력해주세요!\n`copy(document.querySelector("body").innerHTML)`',
+      message: `시험문제 페이지의 html 을 전부 알려주세요! 잘 모르겠다면 브라우저에 콘솔에 이렇게 입력해주세요!
+---
+copy(document.querySelector('body').innerHTML)
+---
+`,
     },
   ])
 }
