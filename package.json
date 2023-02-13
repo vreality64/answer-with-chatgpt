@@ -1,6 +1,6 @@
 {
   "name": "answer-with-chatgpt",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "auto answering through chatgpt",
   "main": "src/index.ts",
   "author": {
