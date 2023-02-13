@@ -7,6 +7,7 @@ interface Problem {
 
 export function createProblemSet(documentHtml: string) {
   const $document = HTMLParser.parse(documentHtml, { voidTag: { tags: [] } })
+  // selector 을 외부에서 제어할 수 있게 해주어야할까?
   const $list = [...$document.querySelectorAll('#examPanel tr')]
   const $set: Problem[] = []
 
