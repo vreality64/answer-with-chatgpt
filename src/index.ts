@@ -34,7 +34,7 @@ async function main() {
   console.log(`[Log] ChatGPT 가 정답을 알려줬어요!`, answers);
 
   if (prompt.saveToClipboard) {
-    await copyToClipboard(answers);
+    await copyToClipboard(answers.map(answer => answer.selectOption));
   }
 }
 
