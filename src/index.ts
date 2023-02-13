@@ -8,8 +8,15 @@ import { createProblemSet, generateQuestion } from './request'
 
 dotenv.config()
 
+const API_KEY = process.env.OPENAI_API_KEY;
+
+if (API_KEY == null ?? API_KEY.length === 0) {
+  console.error(`[ERROR] ChatGPT OpenAPI Key 를 준비해주세요! 지금은 설정된게 없어요.\nOPENAI_API_KEY 환경변수 값으로 넣어주시면 됩니다!`);
+  process.exit(1);
+}
+
 const api = new ChatGPTAPI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: API_KEY,
   debug: false,
 })
 
