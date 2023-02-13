@@ -1,5 +1,7 @@
 import { ChatGPTAPI } from 'chatgpt'
 import dotenv from 'dotenv'
+import { oraPromise } from 'ora'
+import { delay } from './delay'
 import { requestPrompt } from './prompt'
 import { createProblemSet, generateQuestion } from './request'
 
@@ -7,13 +9,13 @@ dotenv.config()
 
 const api = new ChatGPTAPI({
   apiKey: process.env.OPENAI_API_KEY,
+  debug: false,
 })
 
 async function main() {
   const prompt = await requestPrompt()
   const $problemSet = createProblemSet(prompt.$document)
-
-  const answers = await Promise.all(
+  const pending = Promise.all(
     $problemSet.map(async ($problem) => {
       const question = generateQuestion($problem)
       const response = await api.sendMessage(question)
@@ -26,6 +28,7 @@ async function main() {
       }
     })
   )
+  const [answers] = await oraPromise(Promise.all([pending, delay(5000)]))
 
   console.log(answers)
 }
