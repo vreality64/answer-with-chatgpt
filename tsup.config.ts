@@ -5,10 +5,10 @@ export default defineConfig([
     outDir: 'bin',
     target: 'node16',
     platform: 'node',
-    format: ['esm'],
+    format: ['cjs'],
     shims: true,
     clean: true,
-    minify: false,
+    minify: true,
     bundle: true,
     noExternal: ['chatgpt', 'dotenv', 'ora', 'clipboardy', 'inquirer', 'node-html-parser'],
   }

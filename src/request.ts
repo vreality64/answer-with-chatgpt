@@ -1,4 +1,4 @@
-import HTMLParser from 'node-html-parser'
+const HTMLParser = require('node-html-parser')
 
 interface Problem {
   question: string

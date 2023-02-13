@@ -1,11 +1,14 @@
 #!/usr/bin/env node
-import { ChatGPTAPI } from 'chatgpt'
-import dotenv from 'dotenv'
-import { oraPromise } from 'ora'
-import { copyToClipboard } from './clipboard'
-import { delay } from './delay'
-import { requestPrompt } from './prompt'
-import { createProblemSet, generateQuestion } from './request'
+
+"use strict";
+
+const chatgpt = require('chatgpt');
+const dotenv = require('dotenv');
+const ora = require('ora');
+const { copyToClipboard } = require('./clipboard');
+const { delay } = require('./delay');
+const { requestPrompt } = require('./prompt');
+const { createProblemSet, generateQuestion } = require('./request');
 
 dotenv.config()
 
@@ -16,7 +19,7 @@ if (API_KEY == null ?? API_KEY.length === 0) {
   process.exit(1);
 }
 
-const api = new ChatGPTAPI({
+const api = new chatgpt.ChatGPTAPI({
   apiKey: API_KEY,
   debug: false,
 })
@@ -37,7 +40,7 @@ async function main() {
       }
     })
   )
-  const [answers] = await oraPromise(Promise.all([pending, delay(5000)]))
+  const [answers] = await ora.oraPromise(Promise.all([pending, delay(5000)]))
 
   console.log(`[Log] ChatGPT 가 정답을 알려줬어요!`, answers);
 
