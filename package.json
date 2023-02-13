@@ -20,5 +20,6 @@
     "node-html-parser": "^6.1.4",
     "ora": "^6.1.2",
     "tsx": "^3.12.3"
-  }
+  },
+  "packageManager": "yarn@3.4.1"
 }
