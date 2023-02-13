@@ -12,10 +12,10 @@
   },
   "license": "MIT",
   "type": "module",
-  "main": "build/index.js",
-  "bin": "build/index.js",
+  "main": "./bin/index.js",
+  "bin": "./bin/index.js",
   "files": [
-    "/build"
+    "/bin"
   ],
   "scripts": {
     "start": "tsx src/index.ts",
