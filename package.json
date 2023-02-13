@@ -3,9 +3,17 @@
   "version": "0.0.1",
   "description": "auto answering through chatgpt",
   "main": "src/index.ts",
-  "author": "vreality64 <sh.park@toss.im>",
+  "author": {
+    "name": "vreality64",
+    "email": "vreality64@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vreality64/answer-with-chatgpt"
+  },
   "license": "MIT",
   "type": "module",
+  "bin": "./index.js",
   "scripts": {
     "start": "tsx src/index.ts"
   },
