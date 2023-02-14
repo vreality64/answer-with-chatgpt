@@ -12,7 +12,18 @@ npx tsx answer-with-chatgpt
 # CLI 와 소통시작!
 ```
 
-## Hey~!
+# Install
+
+## 1. Setup Node
+- chatgpt SDK 가 node 18 버전 이상을 요구해요. 해당 버전으로 node 버전을 올려주세요.
+- [nvm](https://github.com/nvm-sh/nvm) 을 사용하는걸 추천합니다.
+
+```tsx
+# nvm install v18.14.0
+nvm use v18.14.0
+```
+
+## 2. Inject ChatGPT API Token
 ​:hand:​ ChatGPT API 를 이용하려면 API KEY가 필요해요!
 
 1. https://platform.openai.com/account/api-keys 에서 API KEY를 새로 생성해주세요

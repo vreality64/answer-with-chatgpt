@@ -42,7 +42,7 @@
     "ora": "^6.1.2"
   },
   "engines": {
-    "node": ">= 18"
+    "node": ">=18"
   },
   "packageManager": "yarn@3.4.1",
   "resolutions": {
