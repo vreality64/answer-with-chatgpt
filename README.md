@@ -8,7 +8,7 @@
 # How to use
 
 ```sh
-npx tsx answer-with-chatgpt
+npx answer-with-chatgpt
 # CLI 와 소통시작!
 ```
 
