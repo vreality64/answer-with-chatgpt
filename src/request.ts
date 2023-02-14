@@ -24,7 +24,6 @@ export function createProblemSet(documentHtml: string) {
       })
       .join('\n')
 
-    console.log(`[Log] createProblemSet`, { question, hint });
     $set.push({
       question,
       hint,

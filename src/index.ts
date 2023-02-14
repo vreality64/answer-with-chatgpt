@@ -31,7 +31,7 @@ async function main() {
       const value = response.text.match(/(\d+)/)
 
       return {
-        question: $problem.question,
+        question,
         answer: response.text,
         selectOption: value == null ? null : value[1],
       }
