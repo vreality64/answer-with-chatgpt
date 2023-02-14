@@ -11,12 +11,17 @@
     "url": "https://github.com/vreality64/answer-with-chatgpt"
   },
   "license": "MIT",
-  "type": "commonjs",
-  "main": "./bin/index.js",
-  "bin": "./bin/index.js",
+  "type": "module",
   "files": [
     "/bin"
   ],
+  "exports": {
+    ".": {
+      "require": "./bin/index.cjs",
+      "import": "./bin/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "start": "tsx src/index.ts",
     "build": "tsup src/index.ts",

@@ -1,15 +1,14 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsup'
 
 export default defineConfig([
   {
     outDir: 'bin',
-    target: 'node16',
+    target: 'node18',
     platform: 'node',
-    format: ['cjs'],
+    format: ['esm', 'cjs'],
     shims: true,
     clean: true,
     minify: true,
     bundle: true,
-    noExternal: ['chatgpt', 'dotenv', 'ora', 'clipboardy', 'inquirer', 'node-html-parser'],
-  }
-]);
+  },
+])

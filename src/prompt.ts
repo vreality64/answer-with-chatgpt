@@ -1,4 +1,4 @@
-const inquirer = require('inquirer');
+import inquirer from 'inquirer';
 
 async function receive<Response>(questions: any[]) {
   return new Promise<Response>((resolve, reject) => {

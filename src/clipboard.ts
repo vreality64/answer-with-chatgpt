@@ -1,4 +1,4 @@
-const clipboard = require('clipboardy');
+import clipboard from 'clipboardy';
 
 export async function copyToClipboard(data: any) {
   try {
